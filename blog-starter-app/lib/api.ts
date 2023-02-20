@@ -1,6 +1,11 @@
 import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
+import { sync } from 'glob';
+import path from 'path';
+
+// const BASE_PATH = '/posts';
+// const POSTS_PATH = path.join(process.cwd(), BASE_PATH);
 
 const postsDirectory = join(process.cwd(), '_posts')
 
@@ -38,6 +43,12 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllPosts(fields: string[] = []) {
+  // const postPaths: string[] = sync(`${POSTS_PATH}/**/*.md`);
+  // return postPaths.map((path) => {
+  //   return {
+  //     slug: path.slice(path.indexOf(BASE_PATH)).replace('.md', '')
+  //   }
+  // })
   const slugs = getPostSlugs()
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
