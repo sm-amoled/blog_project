@@ -191,7 +191,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     block?.type === 'page' && block?.parent_table === 'collection'
 
   const showTableOfContents = !!isBlogPost
-  const minTableOfContentsItems = 3
+  const minTableOfContentsItems = 4
 
   const pageAside = React.useMemo(
     () => (
@@ -242,6 +242,7 @@ export const NotionPage: React.FC<types.PageProps> = ({
     getPageProperty<string>('Description', block, recordMap) ||
     config.description
 
+    // 용도 : 페이지의 탭에 표시되는 형태를 결정함
   return (
     <>
       <PageHead

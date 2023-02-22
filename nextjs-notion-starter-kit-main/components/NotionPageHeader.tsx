@@ -4,7 +4,7 @@ import * as types from 'notion-types'
 import { IoMoonSharp } from '@react-icons/all-files/io5/IoMoonSharp'
 import { IoSunnyOutline } from '@react-icons/all-files/io5/IoSunnyOutline'
 import cs from 'classnames'
-import { Breadcrumbs, Header, Search, useNotionContext } from 'react-notion-x'
+import { Header, Search, useNotionContext } from 'react-notion-x'
 
 import { isSearchEnabled, navigationLinks, navigationStyle } from '@/lib/config'
 import { useDarkMode } from '@/lib/use-dark-mode'
@@ -41,11 +41,14 @@ export const NotionPageHeader: React.FC<{
   if (navigationStyle === 'default') {
     return <Header block={block} />
   }
+  
+  //용도 : 페이지의 스티키 헤더 부분
+// return <div></div>
 
   return (
     <header className='notion-header'>
       <div className='notion-nav-header'>
-        <Breadcrumbs block={block} rootOnly={true} />
+        {/* <Breadcrumbs block={block} rootOnly={true} /> */}
 
         <div className='notion-nav-header-rhs breadcrumbs'>
           {navigationLinks
