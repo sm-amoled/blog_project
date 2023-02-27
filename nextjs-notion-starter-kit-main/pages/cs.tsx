@@ -30,6 +30,7 @@ export default function cs(props) {
     <div>
       {/* 네비게이션 */}
       <div className="notion-header">
+        <div style={{width: '100%', height: '100%', backgroundColor: 'white', opacity: 0.3}}></div>
         <div className="notion-nav-header">
           <div>frist</div>
           <div>second</div>
@@ -56,8 +57,21 @@ export default function cs(props) {
 
       {/* 링크 */}
       <li className={pageStyle.linkList}>
-        <Link href="/">
-          <a className={pageStyle.linkBlock}>
+        <Link href="/" className={pageStyle.linkBlock}>
+          <a>
+            <div className={pageStyle.linkBlockContainer}>
+              <div className = {pageStyle.linkBlockText}>
+                <text className = {pageStyle.linkBlockTitle}>제목</text>
+                <text className = {pageStyle.linkBlockDescription}>오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.
+</text>
+                <text className = {pageStyle.linkBlockShow}>제목에 대해 알아보기 </text>
+              </div>
+              <img src="screenshot.png" className = {pageStyle.linkBlockImage} />
+            </div>
+          </a>
+        </Link>
+        <Link href="/" className={pageStyle.linkBlock}>
+          <a>
             <div className={pageStyle.linkBlockContainer}>
               <div className = {pageStyle.linkBlockText}>
                 <text className = {pageStyle.linkBlockTitle}>제목</text>

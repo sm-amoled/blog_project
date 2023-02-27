@@ -4,7 +4,8 @@ import { NotionPage } from '@/components/NotionPage'
 import { domain } from '@/lib/config'
 import { resolveNotionPage } from '@/lib/resolve-notion-page'
 import indexPageStyle from "../styles/indexPage.module.css"
-import Link from 'next/link'
+
+import { ContentMenuItem } from '@/components/contentMenuItem'
 
 export const getStaticProps = async () => {
   try {
@@ -29,6 +30,7 @@ export default function NotionDomainPage(props) {
     <div>
       {/* 네비게이션 */}
       <div className="notion-header">
+      <div style={{width: '100%', height: '100%', backgroundColor: 'white', opacity: 0.3}}></div>
         <div className="notion-nav-header">
           <div>frist</div>
           <div>second</div>
@@ -38,46 +40,37 @@ export default function NotionDomainPage(props) {
           <div>sixth</div>
         </div>
       </div>
+      
+      <div style={{backgroundColor: "#111111"}}>
 
-      {/* 타이틀 이미지 */}
-      <img src="titleImage.jpg" style={{width:"100%", height: "300px", "objectFit": "cover"}}></img>
+        {/* 타이틀 이미지 */}
+        <img src="titleImage.jpg" style={{width:"100%", height: "300px", "objectFit": "cover"}}></img>
 
-      {/* 컨텐츠 메뉴 */}
-      <div className={indexPageStyle.contetMenu}>
-        <ul className={indexPageStyle.contentMenuList}>
-          <Link href="/8c2ba592e9f946418c1dfa3406f94aa9">
-            <a className={indexPageStyle.contentMenuListItem}>
-              <text className={indexPageStyle.contentMenuListItemTitle}>알고리즘</text>
-              <text className={indexPageStyle.contentMenuListItemSubtitle}>자료구조와 알고리즘 학습</text>
-              <img className={indexPageStyle.contentMenuListItemImage} src="404.png"></img>
-            </a>
-          </Link>
-          <Link href="/cs">
-          <a className={indexPageStyle.contentMenuListItem}>
-            <text className={indexPageStyle.contentMenuListItemTitle}>Computer Science</text>
-            <text className={indexPageStyle.contentMenuListItemSubtitle}>컴퓨터 과학</text>
-            <img className={indexPageStyle.contentMenuListItemImage} src="404.png"></img>
-          </a>
-          </Link>
-        </ul>
-        <ul className={indexPageStyle.contentMenuList}>
-          <li className={indexPageStyle.contentMenuListItem}>
-          <text className={indexPageStyle.contentMenuListItemTitle}>제목이 점점 길어져버리면</text>
-            <text className={indexPageStyle.contentMenuListItemSubtitle}>부제목이 만약에 이렇게 길어져버리면 2줄까지 자동으로 만들어주겠지?</text>
-            <img className={indexPageStyle.contentMenuListItemImage} src="404.png"></img>
-          </li>
-        </ul>
-        <ul className={indexPageStyle.contentMenuList}>
-          <li className={indexPageStyle.contentMenuListItem}>first</li>
-          <li className={indexPageStyle.contentMenuListItem}>second</li>
-        </ul>
+        {/* 컨텐츠 메뉴 */}
+        <div className={indexPageStyle.contetMenu}>
+          <ul className={indexPageStyle.contentMenuList}>
+            <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="알고리즘" desc="자료구조와 알고리즘 학습" imgSrc="404.png" bgColor="#46aa58" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/cs" title="Computer Science" desc="컴퓨터 과학" imgSrc="404.png" bgColor="#2C431E" hzRatio="1"></ContentMenuItem>
+          </ul>
+          <ul className={indexPageStyle.contentMenuList}>
+            <ContentMenuItem href="/cs" title="iOS 개발" desc="부제목이 만약에 이렇게 길어져버리면 2줄까지 자동으로 만들어주겠지?" imgSrc="404.png" bgColor="#6F903A" hzRatio="1"></ContentMenuItem>
+          </ul>
+          <ul className={indexPageStyle.contentMenuList}>
+            <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="토이 프로젝트" desc="자료구조와 알고리즘 학습" imgSrc="404.png" bgColor="#31785B" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/cs" title="Computer Science" desc="노션 블로그 만들기" imgSrc="404.png" bgColor="#4B532B" hzRatio="1"></ContentMenuItem>
+          </ul>
+          <ul className={indexPageStyle.contentMenuList}>
+            <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="Retrospect" desc="회고합시다!" imgSrc="404.png" bgColor="#15534C" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/cs" title="About Me" desc="Who Am I...?" imgSrc="404.png" bgColor="#FFa105" hzRatio="3"></ContentMenuItem>
+          </ul>
+        </div>
+
+        {/* 푸터 */}
+        <div className={indexPageStyle.footer}>
+            {/* <div>footer</div> */}
+          </div>
+        </div>
       </div>
-
-      {/* 푸터 */}
-      <div className={indexPageStyle.footer}>
-        {/* <div>footer</div> */}
-      </div>
-    </div>
   )
 
     return <NotionPage {...props} />
