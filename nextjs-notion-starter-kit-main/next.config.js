@@ -18,5 +18,15 @@ module.exports = withBundleAnalyzer({
     formats: ['image/avif', 'image/webp'],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;"
+  },
+  redirects: async() => {
+    return [
+      {
+        source: '/computer-science-1f40aba4e3c44061812f9c9456094996',
+        destination: '/EntranceCS',
+        permanent: true
+      }
+    ]
   }
 })
+

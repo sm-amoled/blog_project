@@ -50,18 +50,18 @@ export default function NotionDomainPage(props) {
         <div className={indexPageStyle.contetMenu}>
           <ul className={indexPageStyle.contentMenuList}>
             <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="알고리즘" desc="자료구조와 알고리즘 학습" imgSrc="404.png" bgColor="#46aa58" hzRatio="1"></ContentMenuItem>
-            <ContentMenuItem href="/cs" title="Computer Science" desc="컴퓨터 과학" imgSrc="404.png" bgColor="#2C431E" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/EntranceCS" title="Computer Science" desc="컴퓨터 과학" imgSrc="404.png" bgColor="#2C431E" hzRatio="1"></ContentMenuItem>
           </ul>
           <ul className={indexPageStyle.contentMenuList}>
-            <ContentMenuItem href="/cs" title="iOS 개발" desc="부제목이 만약에 이렇게 길어져버리면 2줄까지 자동으로 만들어주겠지?" imgSrc="404.png" bgColor="#6F903A" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/EntranceCS" title="iOS 개발" desc="부제목이 만약에 이렇게 길어져버리면 2줄까지 자동으로 만들어주겠지?" imgSrc="404.png" bgColor="#6F903A" hzRatio="1"></ContentMenuItem>
           </ul>
           <ul className={indexPageStyle.contentMenuList}>
             <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="토이 프로젝트" desc="자료구조와 알고리즘 학습" imgSrc="404.png" bgColor="#31785B" hzRatio="1"></ContentMenuItem>
-            <ContentMenuItem href="/cs" title="Computer Science" desc="노션 블로그 만들기" imgSrc="404.png" bgColor="#4B532B" hzRatio="1"></ContentMenuItem>
+            <ContentMenuItem href="/EntranceCS" title="Computer Science" desc="노션 블로그 만들기" imgSrc="404.png" bgColor="#4B532B" hzRatio="1"></ContentMenuItem>
           </ul>
           <ul className={indexPageStyle.contentMenuList}>
             <ContentMenuItem href="/8c2ba592e9f946418c1dfa3406f94aa9" title="Retrospect" desc="회고합시다!" imgSrc="404.png" bgColor="#15534C" hzRatio="1"></ContentMenuItem>
-            <ContentMenuItem href="/cs" title="About Me" desc="Who Am I...?" imgSrc="404.png" bgColor="#FFa105" hzRatio="3"></ContentMenuItem>
+            <ContentMenuItem href="/EntranceCS" title="About Me" desc="Who Am I...?" imgSrc="404.png" bgColor="#FFa105" hzRatio="3"></ContentMenuItem>
           </ul>
         </div>
 

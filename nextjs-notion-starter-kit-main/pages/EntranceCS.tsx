@@ -25,7 +25,7 @@ export const getStaticProps = async () => {
 //   return <NotionPage {...props} />
 // }
 
-export default function cs(props) {
+export default function EntranceCS(props) {
   return (
     <div>
       {/* 네비게이션 */}
@@ -57,14 +57,14 @@ export default function cs(props) {
 
       {/* 링크 */}
       <li className={pageStyle.linkList}>
-        <Link href="/" className={pageStyle.linkBlock}>
+        <Link href="/dac548a37b19429e8aa5ea7124aff2ba" className={pageStyle.linkBlock}>
           <a>
             <div className={pageStyle.linkBlockContainer}>
               <div className = {pageStyle.linkBlockText}>
-                <text className = {pageStyle.linkBlockTitle}>제목</text>
-                <text className = {pageStyle.linkBlockDescription}>오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.
+                <text className = {pageStyle.linkBlockTitle}>운영체제</text>
+                <text className = {pageStyle.linkBlockDescription}>운영체제에 대한 설명은 이렇게 길게 작성될 예정입니다.운영체제에 대한 설명은 이렇게 길게 작성될 예정입니다운영체제에 대한 설명은 이렇게 길게 작성될 예정입니다운영체제에 대한 설명은 이렇게 길게 작성될 예정입니다
 </text>
-                <text className = {pageStyle.linkBlockShow}>제목에 대해 알아보기 </text>
+                <text className = {pageStyle.linkBlockShow}>운영체제에 대해 알아보기 </text>
               </div>
               <img src="screenshot.png" className = {pageStyle.linkBlockImage} />
             </div>
