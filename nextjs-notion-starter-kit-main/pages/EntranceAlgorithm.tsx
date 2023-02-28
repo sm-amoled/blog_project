@@ -25,23 +25,22 @@ export const getStaticProps = async () => {
 //   return <NotionPage {...props} />
 // }
 
-export default function EntranceCS(props) {
+export default function EntranceAlgorithm(props) {
   return (
-    <div className={pageStyle.pageBackground}>
-      <IndexNavigator />
+    <div>
       <div className={pageStyle.pageLayout}>
+      {/* 네비게이션 */}
+      <IndexNavigator />
 
       {/* 타이틀 */}
       <div className={pageStyle.titleBlock}>
         <div className={pageStyle.title}>
-            컴퓨터 과학 & 공학
+            오늘의 제목
         </div>
         <div className={pageStyle.description}>
-          <p>컴퓨터 과학과 컴퓨터 공학은 현대 사회에서 사람이 수행하는 거의 대부분의 활동에 기초가 되는 정보처리에 대해 연구하며, 현실을 가상세계로 확장시켜 불가능을 가능케하는 학문입니다.</p>
-          <p>망원경을 고도로 개발하여 우주를 더욱 선명하고 정확하게 이해하려는 천문학처럼, 컴퓨터 과학과 컴퓨터 공학은 컴퓨터의 발전을 통해 세상을 더욱 풍성하게 이해하고 풍요로운 미래로 우리를 이끌어갑니다.</p>
-          <p>함께 공부해요!</p>
-          </div>
-        <img src="EntranceImages/computer-science.jpg" className={pageStyle.image}>
+        오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.오늘의 설명은 이렇게 길게 작성될 예정입니다.
+        </div>
+        <img src="screenshot.png" className={pageStyle.image}>
           
         </img>
       </div>
